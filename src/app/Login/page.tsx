@@ -1,6 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
-
 export default function Login() {
   return (
     <div className="flex justify-center mt-10 mr-16 mb-32">
