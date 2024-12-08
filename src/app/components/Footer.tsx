@@ -1,93 +1,108 @@
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
-
-const Footer = () => {
+import Image from "next/image";
+export default function Footer() {
     return (
-        <footer className="bg-black text-white pt-20">
-            <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
-                {/* Exclusive */}
-                <div>
-                    <h3 className="font-bold text-lg mb-4">Exclusive</h3>
-                    <p className="mb-2">Subscribe</p>
-                    <p className="mb-4">Get 10% off your first order</p>
-                    <div className="relative">
+        <footer className="bg-[#F0F0F0]">
+            {/* Subscribe Section */}
+            <div className="bg-black rounded-xl w-[92.5%] mx-auto h-auto flex flex-col md:flex-row items-center justify-between py-8 px-8 mt-16">
+                {/* Left Section */}
+                <div className="text-center md:text-left md:w-1/2">
+                    <p className="text-[24px] md:text-[40px] text-white tracking-tighter leading-tight font-extrabold">
+                        STAY UPTO DATE ABOUT OUR LATEST OFFERS
+                    </p>
+                </div>
+
+                {/* Right Section */}
+                <div className="flex flex-col gap-4 items-center w-full md:w-[40%] mt-6 md:mt-0">
+                    {/* Email Input */}
+                    <div className="w-full flex items-center gap-3 bg-white px-4 py-2 rounded-full shadow-sm">
+                        <Image src="/mail.svg" alt="search" width={24} height={24} />
                         <input
-                            type="email"
-                            placeholder="Enter your email"
-                            className="w-full bg-black border-white border p-3 text-sm rounded-md placeholder-gray-400 focus:outline-none"
+                            type="text"
+                            placeholder="Enter your email address"
+                            className="flex-1 bg-transparent text-gray-500 text-[14px] outline-none placeholder-gray-400"
                         />
-                        <button className="absolute right-2 top-2 bg-white text-black px-3 py-1 text-sm font-bold rounded">
-                            &gt;
-                        </button>
                     </div>
-                </div>
-                {/* Support */}
-                <div>
-                    <h3 className="font-bold text-lg mb-4">Support</h3>
-                    <p>111 Bijoy Korangi, Landhi,</p>
-                    <p>DH 1515, Karachi.</p>
-                    <p className="mt-2">exclusive@gmail.com</p>
-                    <p>+88015-88888-9999</p>
-                </div>
-
-                {/* Account */}
-                <div>
-                    <h3 className="font-bold text-lg mb-4">Account</h3>
-                    <ul className="space-y-2">
-                        <li>My Account</li>
-                        <li>Login / Register</li>
-                        <li>Cart</li>
-                        <li>Wishlist</li>
-                        <li>Shop</li>
-                    </ul>
-                </div>
-
-                {/* Quick Link */}
-                <div>
-                    <h3 className="font-bold text-lg mb-4">Quick Link</h3>
-                    <ul className="space-y-2">
-                        <li>Privacy Policy</li>
-                        <li>Terms Of Use</li>
-                        <li>FAQ</li>
-                        <li>Contact</li>
-                    </ul>
-                </div>
-
-                {/* Download App */}
-                <div>
-                    <h3 className="font-bold text-lg mb-4">Download App</h3>
-                    <p className="mb-2 text-[12px] opacity-70">Save $3 with App New User Only</p>
-                    <div className="flex items-center gap-2 mb-4">
-                        <img
-                            src="/Qr.png"
-                            alt="Google Play"
-                            className="w-[76px] h-[76px] cursor-pointer"
-                        />
-                        <div className=''>
-                            <img
-                                src="/GoogleP.png"
-                                alt="Google Play"
-                                className="h-[30px] w-[104px] cursor-pointer"
-                            />
-                            <img
-                                src="/AppStore.png"
-                                alt="App Store"
-                                className="h-[30px] w-[104px] cursor-pointer"
-                            />
-                        </div>
-                    </div>
-                    <div className="flex items-center gap-4 text-xl">
-                        <FaFacebookF className="cursor-pointer hover:text-gray-400 w-[24px] h-[24px]" />
-                        <FaTwitter className="cursor-pointer hover:text-gray-400 w-[24px] h-[24px]" />
-                        <FaInstagram className="cursor-pointer hover:text-gray-400 w-[24px] h-[24px]" />
-                        <FaLinkedinIn className="cursor-pointer hover:text-gray-400 w-[24px] h-[24px]" />
-                    </div>
+                    {/* Subscribe Button */}
+                    <button className="bg-white rounded-full w-full py-2 text-black font-semibold">
+                        Subscribe to Newsletter
+                    </button>
                 </div>
             </div>
-            <div className="mt-10 border-t border-gray-800 pt-6 text-center text-gray-500">
-                © Copyright Noor Hassan 2024. All rights reserved.
+
+            {/* Footer Content */}
+            <div className="bg-[#F0F0F0] py-12 px-8">
+                <div className="max-w-[1240px] mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 text-center md:text-left">
+                    {/* Logo and Description */}
+                    <div className="space-y-4">
+                        <p className="text-[33.45px] md:text-[40px] text-black tracking-tighter leading-tight font-extrabold">
+                            SHOP.CO
+                        </p>
+                        <p className="text-gray-500 text-[14px]">
+                            We have clothes that suit your style and which you&apos;re proud to wear. From women to men.
+                        </p>
+                        {/* Social Media Icons */}
+                        <div className="flex items-center justify-center md:justify-start gap-4">
+                            <Image src="/twitter.svg" alt="Twitter" width={24} height={24} />
+                            <Image src="/facebook.svg" alt="Facebook" width={24} height={24} />
+                            <Image src="/insta.svg" alt="Instagram" width={24} height={24} />
+                            <Image src="/github.svg" alt="GitHub" width={24} height={24} />
+                        </div>
+                    </div>
+
+                    {/* Footer Links */}
+                    <div>
+                        <h3 className="font-semibold text-[16px] mb-4">COMPANY</h3>
+                        <ul className="text-black opacity-60 space-y-4">
+                            <li>About</li>
+                            <li>Features</li>
+                            <li>Works</li>
+                            <li>Career</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 className="font-semibold text-[16px] mb-4">HELP</h3>
+                        <ul className="text-black opacity-60 space-y-4">
+                            <li>Customer Support</li>
+                            <li>Delivery Details</li>
+                            <li>Terms & Conditions</li>
+                            <li>Privacy Policy</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 className="font-semibold text-[16px] mb-4">FAQ</h3>
+                        <ul className="text-black opacity-60 space-y-4">
+                            <li>Account</li>
+                            <li>Manage Deliveries</li>
+                            <li>Orders</li>
+                            <li>Payments</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 className="font-semibold text-[16px] mb-4">RESOURCES</h3>
+                        <ul className="text-black opacity-60 space-y-4">
+                            <li>Free eBooks</li>
+                            <li>Development Tutorial</li>
+                            <li>How to - Blog</li>
+                            <li>YouTube Playlist</li>
+                        </ul>
+                    </div>
+                </div>
+
+                {/* Footer Bottom */}
+                <div className="border-t max-w-[1240px] border-gray-300 mt-8 pt-8 text-gray-500 text-center md:text-left">
+                    <div className="flex flex-col md:flex-row items-center justify-between gap-4 ml-4">
+                        <p>Shop.co © 2000-2024, All Rights Reserved</p>
+                        {/* Payment Icons */}
+                        <div className="flex items-center gap-[12px]">
+                            <Image src="/visa.svg" alt="Visa" width={46.61} height={30.03} />
+                            <Image src="/master.svg" alt="MasterCard" width={46.61} height={30.03} />
+                            <Image src="/paypal.svg" alt="PayPal" width={46.61} height={30.03} />
+                            <Image src="/apay.svg" alt="Apple Pay" width={46.61} height={30.03} />
+                            <Image src="/gpay.svg" alt="Google Pay" width={46.61} height={30.03} />
+                        </div>
+                    </div>
+                </div>
             </div>
         </footer>
     );
-};
-
-export default Footer;
+}
